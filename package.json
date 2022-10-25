@@ -1,0 +1,17 @@
+{
+  "name": "banquet-frontend-template",
+  "version": "1.0.0-SNAPSHOT",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@toasttab/blueprints-cli": "latest",
+    "typescript": "^4.8.4"
+  },
+  "workspaces": [
+    "packages"
+  ],
+  "volta": {
+    "node": "16.14.0",
+    "yarn": "1.22.0"
+  }
+}
