@@ -1,0 +1,57 @@
+# Syntax
+# https://github.com/toasttab/system-docs/blob/main/infrastructure/devx/build-automation/tadpole/how-to-read-the-grammar.md
+environment:
+  FORCE_COLOR: "1"
+tools:
+  nodejs: nodejs16
+version: 2.0
+stages:
+    - stage: checkout
+      steps:
+        - default_checkout:
+    - stage: install
+      steps:
+        - yarn:
+            - install --ignore-optional
+    - stage: 'test'
+      steps:
+        - yarn:
+            - test
+    - stage: 'version'
+      when: env.BRANCH_NAME == 'main'
+      steps:
+        - tagship:
+            project_type: spa
+            var_name: VERSION
+            tag_initial: true
+        - yarn:
+            - version --no-git-tag-version --new-version $VERSION.0.0                     
+    - stage: 'build'
+      steps:
+        - yarn:
+            - build
+    - stage: scan
+      steps:
+        - sonar_scan:
+            project_key: food-waste-spa
+            git_repo: toasttab/food-waste-spa
+            project_type: nodejs
+    - stage: 'ship'
+      when: env.BRANCH_NAME == 'main'  
+      steps:                                                                 
+        - yarn:
+            - banquet build-import-map-manifest
+                --version=$VERSION
+                --cdnPath=food-waste-spa
+                --entry=food-waste-spa:main.js
+        - shell:
+            - mv dist/assets-manifest.json dist/assets-manifest-$VERSION.json
+        - upload_to_s3:
+            source: ./dist
+            target: s3://toast-static-assets/spa/food-waste-spa/
+            extra_args:
+                - --acl public-read
+    - stage: 'outdated'
+      steps:
+        - yarn:
+            - outdated || echo "Some libraries are out of date."          

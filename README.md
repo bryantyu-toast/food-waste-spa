@@ -1,34 +1,17 @@
-# How to use this template
+# banquet-child-spa
 
-**Clone the template in github:**
+A banquet-child-spa is designed to be loaded by a banquet-layout eg <https://github.com/toasttab/restaurant-admin-layout>
+Ideally it should not have child SPAs of it own, but this is a convention rather than a technical limitation.
 
-In a web browser, click the "Use this template" button, or navigate to:
+## How to register a SPA
 
-https://github.com/toasttab/banquet-frontend-template/generate
+Spas should now be managed via Tadpole via SPA Control. [See this document](https://toasttab.atlassian.net/wiki/spaces/FE/pages/491847930/How+to+Create+a+new+SPA#Configure-Tadpole-and-SPA-control)
 
-Enter your repository name: e.g. my-spa
+## How to develop locally or live on preproduction
 
-In a terminal, navigate to where you keep your projects
+Please refer to the following documentation: [Import map overrides dev tooling](https://toasttab.atlassian.net/wiki/spaces/FE/pages/2562883591/Import+map+overrides+dev-tooling#Override-the-Import-Map).
 
-```
-cd ~/toast/git-repos
-```
+## Best practices
 
-Clone your new repository
-```
-git clone git@github.com:toasttab/my-spa.git
-cd my-spa
-```
-
-Run the generate command with the spa blueprint
-```
-yarn && yarn blueprints generate spa
-```
-
-Test it out
-```
-yarn test
-yarn storybook
-```
-
-See https://toasttab.atlassian.net/wiki/spaces/FE/pages/491847930/How+to+Create+a+new+SPA
+- Load child SPAs into layout-spas using the BanquetLoader package.
+- If you need to load your SPA into legacy pages consider using the Widget SPA template.
