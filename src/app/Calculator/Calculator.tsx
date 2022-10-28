@@ -5,6 +5,7 @@ import { Select } from '@toasttab/buffet-pui-dropdowns'
 import { NumberInput } from '@toasttab/buffet-pui-text-input'
 import { getCategories, getIngredients, getYield } from '../../data/DATA'
 import { BaseCard } from '@toasttab/buffet-pui-card'
+import { Size } from '@toasttab/buffet-pui-text-base'
 
 const Row = ({ children }: any) => {
   return <div className='mb-4'>{children}</div>
@@ -25,29 +26,6 @@ export const Calculator = () => {
   const [unprocessedCasePrice, setUnprocessedCasePrice] = useState<number>(20.0)
   const [preprocessedCasePrice, setPreprocessedCasePrice] =
     useState<number>(20.0)
-
-  // const [unprocessedPercentYield, setUnprocessedPercentYield] =
-  //   useState<number>(91)
-  // const [preprocessedPercentYield, setPreprocessedPercentYield] =
-  //   useState<number>(100)
-
-  // const [unprocessedYieldWeight, setUnprocessedYieldWeight] =
-  //   useState<number>(36.4)
-  // const [preprocessedYieldWeight, setPreprocessedYieldWeight] =
-  //   useState<number>(40)
-
-  // const [unprocessedPlusLabor, setUnprocessedPlusLabor] = useState<number>(2.5)
-  // const [preprocessedPlusLabor, setPreprocessedPlusLabor] = useState<number>(0)
-
-  // const [unprocessedTotalPrice, setUnprocessedTotalPrice] =
-  //   useState<number>(22.5)
-  // const [preprocessedTotalPrice, setPreprocessedTotalPrice] =
-  //   useState<number>(10)
-
-  // const [unprocessedUsablePrice, setUnprocessedUsablePrice] =
-  //   useState<number>(0.62)
-  // const [preprocessedUsablePrice, setPreprocessedUsablePrice] =
-  //   useState<number>(0.25)
 
   const [hourlyLaborCost, setHourlyLaborCost] = useState<number>(10.0)
 
@@ -71,8 +49,8 @@ export const Calculator = () => {
   return (
     <div className='max-w-5xl m-auto pt-16'>
       <p className='text-heading-1 mb-16'>Food waste calculator</p>
-      <div className='grid grid-cols-2 gap-8'>
-        <div>
+      <div className='flex items-start'>
+        <BaseCard className='flex-1'>
           <Row>
             <div className='flex items-center'>
               <p className='font-semibold w-52'>Category</p>
@@ -113,6 +91,7 @@ export const Calculator = () => {
                     prefix='lbs'
                     value={unprocessedStartWeight}
                     onChange={(e) => setUnprocessedStartWeight(Number(e.value))}
+                    size={Size.sm}
                   />
                 </div>
                 <div className='flex-1'>
@@ -169,7 +148,7 @@ export const Calculator = () => {
           </Row>
 
           <div className='border-t py-4 mt-4'>
-            <p className='text-heading-4'>Readonly</p>
+            <p className='text-heading-4'>Read only</p>
 
             <Row>
               <div className='flex items-center'>
@@ -306,79 +285,78 @@ export const Calculator = () => {
               </div>
             </Row>
           </div>
-        </div>
-        <div>
-          <BaseCard>
-            <p className='text-heading-3 mb-4'>Secondary Uses</p>
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>How much is edible?</p>
-                <p className='flex-1'>{ingredientYield['Description']}</p>
-              </div>
-            </Row>
+        </BaseCard>
 
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>Reduction Tip #1</p>
-                <p className='flex-1'>{ingredientYield['Reduction Tip #1']}</p>
-              </div>
-            </Row>
+        <div className='w-1/2 px-8 py-4'>
+          <p className='text-heading-3 mb-8'>Secondary Uses</p>
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>How much is edible?</p>
+              <p className='flex-1'>{ingredientYield['Description']}</p>
+            </div>
+          </Row>
 
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>Reduction Tip #2</p>
-                <p className='flex-1'>{ingredientYield['Reduction Tip #2']}</p>
-              </div>
-            </Row>
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>Reduction Tip #1</p>
+              <p className='flex-1'>{ingredientYield['Reduction Tip #1']}</p>
+            </div>
+          </Row>
 
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>Reduction Tip #3</p>
-                <p className='flex-1'>{ingredientYield['Reduction Tip #3']}</p>
-              </div>
-            </Row>
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>Reduction Tip #2</p>
+              <p className='flex-1'>{ingredientYield['Reduction Tip #2']}</p>
+            </div>
+          </Row>
 
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>Sample Dish</p>
-                <p className='flex-1'>{ingredientYield['Sample Dish']}</p>
-              </div>
-            </Row>
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>Reduction Tip #3</p>
+              <p className='flex-1'>{ingredientYield['Reduction Tip #3']}</p>
+            </div>
+          </Row>
 
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>Source</p>
-                <p className='flex-1'>
-                  <a
-                    className='text-color-link'
-                    href={ingredientYield['Yield % Source']}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    {ingredientYield['Yield % Source']}
-                  </a>
-                </p>
-              </div>
-            </Row>
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>Sample Dish</p>
+              <p className='flex-1'>{ingredientYield['Sample Dish']}</p>
+            </div>
+          </Row>
 
-            <Row>
-              <div>
-                <p className='font-semibold mr-4 mb-1'>
-                  What is my waste savings?
-                </p>
-                <p>
-                  {(
-                    (1 -
-                      (ingredientYield['Yield Percentage']
-                        ? ingredientYield['Yield Percentage'].slice(0, -1)
-                        : 0) /
-                        100) *
-                    unprocessedStartWeight
-                  ).toFixed(2)}
-                </p>
-              </div>
-            </Row>
-          </BaseCard>
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>Source</p>
+              <p className='flex-1'>
+                <a
+                  className='text-color-link'
+                  href={ingredientYield['Yield % Source']}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  {ingredientYield['Yield % Source']}
+                </a>
+              </p>
+            </div>
+          </Row>
+
+          <Row>
+            <div>
+              <p className='font-semibold mr-4 mb-1'>
+                What is my waste savings?
+              </p>
+              <p>
+                {(
+                  (1 -
+                    (ingredientYield['Yield Percentage']
+                      ? ingredientYield['Yield Percentage'].slice(0, -1)
+                      : 0) /
+                      100) *
+                  unprocessedStartWeight
+                ).toFixed(2)}
+              </p>
+            </div>
+          </Row>
         </div>
       </div>
     </div>

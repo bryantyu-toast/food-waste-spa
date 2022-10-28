@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useBanquetProps, BanquetProps } from 'banquet-runtime-modules'
 import { Home } from './Home/Home'
 import { Calculator } from './Calculator/Calculator'
+import { FoodDonation } from './FoodDonation/FoodDonation'
 
 export function App(props?: BanquetProps) {
   return (
@@ -10,6 +11,7 @@ export function App(props?: BanquetProps) {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/calculator' element={<Calculator />} />
+        <Route path='/food-donation' element={<FoodDonation />} />
       </Routes>
     </BrowserRouter>
 

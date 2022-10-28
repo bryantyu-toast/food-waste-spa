@@ -8,13 +8,18 @@ export const BASE_URL = '/restaurants/admin/food-waste'
 
 const FOOD_WASTE_DATA = [
   {
-    title: 'Articles',
+    title: 'Information',
     links: [
       {
-        title: 'How to Track and Reduce Food Waste in Your Restaurant',
-        description: 'Learn how to track food waste',
+        title: 'How to track food waste',
+        description: 'How to Track and Reduce Food Waste in Your Restaurant',
         link: 'https://pos.toasttab.com/blog/on-the-line/reduce-food-waste',
         isExternal: true
+      },
+      {
+        title: 'Donation resources',
+        description: 'List of local food donation resources',
+        link: '/food-donation'
       }
     ]
   },
@@ -54,9 +59,9 @@ const LinkItem = ({ title, description, link, isExternal }: any) => {
       onClick={() => goToPage(link, isExternal, navigate)}
       className='text-left'
     >
-      <BaseCard>
+      <BaseCard className='h-32'>
         <p className='text-color-link font-semibold'>
-          {title} <ArrowForwardIcon />
+          {title} {isExternal ? <ArrowForwardIcon /> : null}
         </p>
 
         <p className='text-color-secondary'>{description}</p>
@@ -75,7 +80,7 @@ export const Home = () => {
       {FOOD_WASTE_DATA.map((data) => {
         return (
           <Section title={data.title}>
-            <div className='grid grid-cols-3'>
+            <div className='grid grid-cols-3 gap-2'>
               {data.links.map(
                 ({ title, description, link, isExternal }: any) => {
                   return (

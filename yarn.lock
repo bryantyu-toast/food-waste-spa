@@ -1153,6 +1153,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.1.2":
+  version "7.20.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@babel/runtime/-/runtime-7.20.0.tgz#824a9ef325ffde6f78056059db3168c08785e24a"
+  integrity sha512-NDYdls71fTXoU8TZHfbBWg7DiZfNzClcKui/+kyi6ppD2L1qnWW3VV6CjtaBXSUGGhiTWJ6ereOIkUvenif66Q==
+  dependencies:
+    regenerator-runtime "^0.13.10"
+
 "@babel/template@^7.12.7", "@babel/template@^7.18.10", "@babel/template@^7.3.3":
   version "7.18.10"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@babel/template/-/template-7.18.10.tgz#6f9134835970d1dbf0835c0d100c9f38de0c5e71"
@@ -3519,6 +3526,30 @@
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
+"@reach/observe-rect@1.2.0":
+  version "1.2.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/observe-rect/-/observe-rect-1.2.0.tgz#d7a6013b8aafcc64c778a0ccb83355a11204d3b2"
+  integrity sha512-Ba7HmkFgfQxZqqaeIWWkNK0rEhpxVQHIoVyW1YDSkGsGIXzcaW4deC8B0pZrNSSyLTdIk7y+5olKt5+g0GmFIQ==
+
+"@reach/rect@^0.16.0":
+  version "0.16.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/rect/-/rect-0.16.0.tgz#78cf6acefe2e83d3957fa84f938f6e1fc5700f16"
+  integrity sha512-/qO9jQDzpOCdrSxVPR6l674mRHNTqfEjkaxZHluwJ/2qGUtYsA0GSZiF/+wX/yOWeBif1ycxJDa6HusAMJZC5Q==
+  dependencies:
+    "@reach/observe-rect" "1.2.0"
+    "@reach/utils" "0.16.0"
+    prop-types "^15.7.2"
+    tiny-warning "^1.0.3"
+    tslib "^2.3.0"
+
+"@reach/utils@0.16.0":
+  version "0.16.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/utils/-/utils-0.16.0.tgz#5b0777cf16a7cab1ddd4728d5d02762df0ba84ce"
+  integrity sha512-PCggBet3qaQmwFNcmQ/GqHSefadAFyNCUekq9RrWoaU9hh/S4iaFgf2MBMdM47eQj5i/Bk0Mm07cP/XPFlkN+Q==
+  dependencies:
+    tiny-warning "^1.0.3"
+    tslib "^2.3.0"
+
 "@remix-run/router@1.0.2":
   version "1.0.2"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@remix-run/router/-/router-1.0.2.tgz#1c17eadb2fa77f80a796ad5ea9bf108e6993ef06"
@@ -4879,7 +4910,7 @@
     "@toasttab/buffet-utils" "^4.1.0"
     tslib "^2.3.1"
 
-"@toasttab/buffet-pui-buttons@^2.2.7":
+"@toasttab/buffet-pui-buttons@^2.2.6", "@toasttab/buffet-pui-buttons@^2.2.7":
   version "2.2.7"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-buttons/-/buffet-pui-buttons-2.2.7.tgz#57d1d0f031bbd7dc311441c106bb164d72e67167"
   integrity sha512-G9CiXl14SD39Dsrv2zcPKsP03Ycd515xxhWMeOqnuRO7wGMdIS1kEVx3mljrZXJLFUDEVWhU64v7vO5SuMhGxA==
@@ -4897,13 +4928,30 @@
     "@toasttab/buffet-utils" "^4.2.0-alpha.0"
     tslib "^2.3.1"
 
-"@toasttab/buffet-pui-card@^1.4.13":
+"@toasttab/buffet-pui-card@^1.4.12", "@toasttab/buffet-pui-card@^1.4.13":
   version "1.4.13"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-card/-/buffet-pui-card-1.4.13.tgz#65cd0586756f21ccc5141a2bd56715928ba55707"
   integrity sha512-+y6ZXPeA1sE6bcM/XgbjsxVpARXVj0nOijidPScYPEXkJpCVWuSSMa1LJqXfr7RPY054FHLJeXcCGkir0kWEfA==
   dependencies:
     "@toasttab/buffet-pui-badge" "^3.3.2"
     "@toasttab/buffet-pui-buttons" "^2.2.7"
+
+"@toasttab/buffet-pui-config-templates@^3.1.14":
+  version "3.1.14"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-config-templates/-/buffet-pui-config-templates-3.1.14.tgz#fdab773f32d5dff5e2f2e77c3273ec273b772fc2"
+  integrity sha512-6BDHYi3/vW8drAVdET8lsI7yzFMPyFQ9+kkltD+H7tOZwvFu4PYgwChCJHLX/c5UrluH9gcvsvJWLoFF/+hhZw==
+  dependencies:
+    "@toasttab/buffet-pui-buttons" "^2.2.6"
+    "@toasttab/buffet-pui-card" "^1.4.12"
+    "@toasttab/buffet-pui-icons" "^5.0.0"
+    "@toasttab/buffet-pui-loading-indicators" "^2.3.0"
+    "@toasttab/buffet-pui-navigation" "^3.0.17"
+    "@toasttab/buffet-use-scroller" "^4.1.1"
+    "@toasttab/buffet-use-window-size" "^0.1.0"
+    "@toasttab/buffet-utils" "^4.0.1"
+    "@toasttab/use-screen-size" "^2.1.0"
+    react-router-dom "^6.2.1"
+    tslib "^2.3.1"
 
 "@toasttab/buffet-pui-date-utilities@^1.3.0":
   version "1.3.0"
@@ -4970,6 +5018,14 @@
   dependencies:
     tslib "^2.3.0"
 
+"@toasttab/buffet-pui-loading-indicators@^2.3.0":
+  version "2.3.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-loading-indicators/-/buffet-pui-loading-indicators-2.3.1.tgz#26d46ebcdbde25f913b72dadafe2ca59a2c49215"
+  integrity sha512-C499Kx49F/mwYxzGLg2tzeq18g+Bwoo4ww4adsCVvZqg8+wTsRR4FEs89L+Xzh7Fn6aAT3efkobc5hHJt5Cyrw==
+  dependencies:
+    "@toasttab/buffet-utils" "^4.1.0"
+    tslib "^2.3.1"
+
 "@toasttab/buffet-pui-locale-utilities@^0.1.3":
   version "0.1.3"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-locale-utilities/-/buffet-pui-locale-utilities-0.1.3.tgz#33501b8c4bec7f4de5d75d465c4e4f85db5f2e9e"
@@ -4977,6 +5033,20 @@
   dependencies:
     "@toasttab/current-environment" "^0.2.0"
     tslib "^2.3.0"
+
+"@toasttab/buffet-pui-navigation@^3.0.17":
+  version "3.0.19"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-navigation/-/buffet-pui-navigation-3.0.19.tgz#b5dec998e43896501675377378b80a8046462404"
+  integrity sha512-467AnerC302Eyofm0lg6YU6CQ9b28y1t5Gq6BLCbKEzmUxYMDEIwROLYVk8zPFOcJJDi7LLTdDC1WP2wOtrXaQ==
+  dependencies:
+    "@reach/rect" "^0.16.0"
+    "@toasttab/buffet-pui-buttons" "^2.3.0-alpha.0"
+    "@toasttab/buffet-pui-icons" "^5.0.0"
+    "@toasttab/buffet-shared-types" "^1.6.0"
+    "@toasttab/buffet-use-scroller" "^4.1.2"
+    "@toasttab/buffet-utils" "^4.1.0"
+    react-use "^17.2.4"
+    tslib "^2.3.1"
 
 "@toasttab/buffet-pui-number-utilities@0.1.9":
   version "0.1.9"
@@ -5049,7 +5119,25 @@
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-shared-types/-/buffet-shared-types-1.6.0.tgz#194a4962f488260114ded0e65bc9693d1820c2aa"
   integrity sha512-fX9BAYdq8OVlkTSi5s1x+Hhqn9cJ/bYYlGBZ2SQQ4b9ktooDcFAstwD9vmHkRhgwuQB/y9vg+hxi6/7EGOh5FQ==
 
-"@toasttab/buffet-utils@^4.1.0":
+"@toasttab/buffet-use-scroller@^4.1.1", "@toasttab/buffet-use-scroller@^4.1.2":
+  version "4.1.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-use-scroller/-/buffet-use-scroller-4.1.2.tgz#0be3d034b77317465bd6110c1441062e543dacf9"
+  integrity sha512-+89fdptadVVEHpAOCWXIx1V2GK5HyOuQDXERWibODe3bPIV8Ghre55ej4YT3JvYb30J1WkOTdoNJ4g3QYvVQ0A==
+  dependencies:
+    "@toasttab/buffet-utils" "^4.1.0"
+    intersection-observer "^0.7.0"
+    react-intersection-observer "^8.26.1"
+    tslib "^2.3.1"
+
+"@toasttab/buffet-use-window-size@^0.1.0":
+  version "0.1.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-use-window-size/-/buffet-use-window-size-0.1.0.tgz#e793b557126dab9b8399e9788f4d9ab948665b3e"
+  integrity sha512-FeDXW+oXmeolkulFpoC8FVDKQX/Pw9MoiMcS8VOIBAsQhtLeCPsMFvUaMjkyGZKkeJE38kajkvaKDAdxf+ed+w==
+  dependencies:
+    "@toasttab/use-debounced-state" "^1.0.1"
+    tslib "^2.3.1"
+
+"@toasttab/buffet-utils@^4.0.1", "@toasttab/buffet-utils@^4.1.0":
   version "4.1.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-utils/-/buffet-utils-4.1.0.tgz#c928f515ec2d35733bc35d0c8741d74e3609e1fd"
   integrity sha512-vulyQVAQgG43JrXgPXi0e+hTAmNtaAz8yZdz2KY4WNDp6P5NRH8fiMFkkczdTjPjTg83bRSMIFbw+8syeWikGQ==
@@ -5170,6 +5258,20 @@
   integrity sha512-pf8JvwJixwoLSOXlcF5T09DvcenkeksXTDRBe2c3JCYd6tr6qpNyeKm9x+NE7/unIYOeuEn8j+96TaD8KSklbQ==
   dependencies:
     tslib "^2.3.0"
+
+"@toasttab/use-debounced-state@^1.0.1":
+  version "1.0.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/use-debounced-state/-/use-debounced-state-1.0.1.tgz#7a17bf76642c9369e6a4f185bf1652dceffa432c"
+  integrity sha512-oj222R3Df4l5KjqKnuU2B5h1ifHkGbxaJgbjRmWBiEHpx9yn1ld2a1ARIwZ+umN6ouA/hkhZjiLemk5a7adHPQ==
+  dependencies:
+    tslib "^2.3.1"
+
+"@toasttab/use-screen-size@^2.1.0":
+  version "2.1.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/use-screen-size/-/use-screen-size-2.1.0.tgz#5e4f6ba167da3033e289b39e6f5a8967fd70b713"
+  integrity sha512-rZ8DfF0TUFdjyLrGKCcWMWG7P1H0dLhJYCx+bOAOBXPwN/L2b+qpJ4SVzDCYNZKVWA1WKmOdAwJgea6gmqmP6w==
+  dependencies:
+    tslib "^2.3.1"
 
 "@toasttab/use-treeview-select@^0.2.2":
   version "0.2.2"
@@ -5438,6 +5540,11 @@
   dependencies:
     jest-matcher-utils "^27.0.0"
     pretty-format "^27.0.0"
+
+"@types/js-cookie@^2.2.6":
+  version "2.2.7"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@types/js-cookie/-/js-cookie-2.2.7.tgz#226a9e31680835a6188e887f3988e60c04d3f6a3"
+  integrity sha512-aLkWa0C0vO5b4Sr798E26QgOkss68Un0bLjs7u9qxzPT5CG+8DuNTffWES58YzJs3hrVAOs1wonycqEBqNJubA==
 
 "@types/jscodeshift@0.11.3":
   version "0.11.3"
@@ -6129,6 +6236,11 @@
   integrity sha512-yRTyhWSls2OY/pYLfwff867r8ekooZ4UI+/gxot5Wj8EFwSf2rG+n+Mo/6LoLQm1TKA4GRj2+LCpbfS937dClQ==
   dependencies:
     tslib "^2.3.0"
+
+"@xobotyi/scrollbar-width@^1.9.5":
+  version "1.9.5"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@xobotyi/scrollbar-width/-/scrollbar-width-1.9.5.tgz#80224a6919272f405b87913ca13b92929bdf3c4d"
+  integrity sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -8699,6 +8811,13 @@ copy-template-dir@^1.4.0:
     readdirp "^2.0.0"
     run-parallel "^1.1.4"
 
+copy-to-clipboard@^3.3.1:
+  version "3.3.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/copy-to-clipboard/-/copy-to-clipboard-3.3.2.tgz#5b263ec2366224b100181dded7ce0579b340c107"
+  integrity sha512-Vme1Z6RUDzrb6xAI7EZlVZ5uvOk2F//GaxKUxajDqm9LhOVM1inxNAD2vy+UZDYsd0uyA9s7b3/FVZPSxqrCfg==
+  dependencies:
+    toggle-selection "^1.0.6"
+
 copy-webpack-plugin@^6.4.1:
   version "6.4.1"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/copy-webpack-plugin/-/copy-webpack-plugin-6.4.1.tgz#138cd9b436dbca0a6d071720d5414848992ec47e"
@@ -8913,6 +9032,14 @@ css-declaration-sorter@^6.3.0:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/css-declaration-sorter/-/css-declaration-sorter-6.3.1.tgz#be5e1d71b7a992433fb1c542c7a1b835e45682ec"
   integrity sha512-fBffmak0bPAnyqc/HO8C3n2sHrp9wcqQz6ES9koRF2/mLOVAx9zIQ3Y7R29sYCteTPqMCwns4WYQoCX91Xl3+w==
 
+css-in-js-utils@^2.0.0:
+  version "2.0.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/css-in-js-utils/-/css-in-js-utils-2.0.1.tgz#3b472b398787291b47cfe3e44fecfdd9e914ba99"
+  integrity sha512-PJF0SpJT+WdbVVt0AOYp9C8GnuruRlL/UFW7932nLWmFLQTaWEzTBQEx7/hn4BuV+WON75iAViSUJLiU3PKbpA==
+  dependencies:
+    hyphenate-style-name "^1.0.2"
+    isobject "^3.0.1"
+
 css-loader@^3.6.0:
   version "3.6.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/css-loader/-/css-loader-3.6.0.tgz#2e4b2c7e6e2d27f8c8f28f61bffcd2e6c91ef645"
@@ -9100,7 +9227,7 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@^3.0.2:
+csstype@^3.0.2, csstype@^3.0.6:
   version "3.1.1"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
@@ -10530,10 +10657,20 @@ fast-memoize@^2.5.2:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/fast-memoize/-/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
   integrity sha512-Ue0LwpDYErFbmNnZSF0UH6eImUwDmogUO1jyE+JbN2gsQz/jICm1Ve7t9QT0rNSsfJt+Hs4/S3GnsDVjL4HVrw==
 
+fast-shallow-equal@^1.0.0:
+  version "1.0.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/fast-shallow-equal/-/fast-shallow-equal-1.0.0.tgz#d4dcaf6472440dcefa6f88b98e3251e27f25628b"
+  integrity sha512-HPtaa38cPgWvaCFmRNhlc6NG7pv6NUHqjPgVAkWGoB9mQMwYB27/K0CvOM5Czy+qpT3e8XJ6Q4aPAnzpNpzNaw==
+
 fast-text-encoding@^1.0.6:
   version "1.0.6"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/fast-text-encoding/-/fast-text-encoding-1.0.6.tgz#0aa25f7f638222e3396d72bf936afcf1d42d6867"
   integrity sha512-VhXlQgj9ioXCqGstD37E/HBeqEGV/qOD/kmbVG8h5xKBYvM1L3lR1Zn4555cQ8GkYbJa8aJSipLPndE1k6zK2w==
+
+fastest-stable-stringify@^2.0.2:
+  version "2.0.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/fastest-stable-stringify/-/fastest-stable-stringify-2.0.2.tgz#3757a6774f6ec8de40c4e86ec28ea02417214c76"
+  integrity sha512-bijHueCGd0LqqNK9b5oCMHc0MluJAx0cwqASgbWMvkO01lCYgIhacVRLcaDz3QnyYIRNJRDwMb41VuT6pHJ91Q==
 
 fastq@^1.6.0:
   version "1.13.0"
@@ -11846,6 +11983,11 @@ hyperlinker@^1.0.0:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/hyperlinker/-/hyperlinker-1.0.0.tgz#23dc9e38a206b208ee49bc2d6c8ef47027df0c0e"
   integrity sha512-Ty8UblRWFEcfSuIaajM34LdPXIhbs1ajEX/BBPv24J+enSVaEVY63xQ6lTO9VRYS5LAoghIG0IDJ+p+IPzKUQQ==
 
+hyphenate-style-name@^1.0.2:
+  version "1.0.4"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz#691879af8e220aea5750e8827db4ef62a54e361d"
+  integrity sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==
+
 i18next@^21.5.2:
   version "21.10.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/i18next/-/i18next-21.10.0.tgz#85429af55fdca4858345d0e16b584ec29520197d"
@@ -12059,6 +12201,13 @@ inline-style-parser@0.1.1:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/inline-style-parser/-/inline-style-parser-0.1.1.tgz#ec8a3b429274e9c0a1f1c4ffa9453a7fef72cea1"
   integrity sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==
 
+inline-style-prefixer@^6.0.0:
+  version "6.0.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/inline-style-prefixer/-/inline-style-prefixer-6.0.1.tgz#c5c0e43ba8831707afc5f5bbfd97edf45c1fa7ae"
+  integrity sha512-AsqazZ8KcRzJ9YPN1wMH2aNM7lkWQ8tSPrW5uDk1ziYwiAPWSZnUsC7lfZq+BDqLqz0B4Pho5wscWcJzVvRzDQ==
+  dependencies:
+    css-in-js-utils "^2.0.0"
+
 inquirer@^6.2.0:
   version "6.5.2"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/inquirer/-/inquirer-6.5.2.tgz#ad50942375d036d327ff528c08bd5fab089928ca"
@@ -12110,6 +12259,11 @@ interpret@^2.2.0:
   version "2.2.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/interpret/-/interpret-2.2.0.tgz#1a78a0b5965c40a5416d007ad6f50ad27c417df9"
   integrity sha512-Ju0Bz/cEia55xDwUWEa8+olFpCiQoypjnQySseKtmjNrnps3P+xfpUmGr90T7yjlVJmOtybRvPXhKMbHr+fWnw==
+
+intersection-observer@^0.7.0:
+  version "0.7.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/intersection-observer/-/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
+  integrity sha512-Id0Fij0HsB/vKWGeBe9PxeY45ttRiBmhFyyt/geBdDHBYNctMRTE3dC1U3ujzz3lap+hVXlEcVaB56kZP/eEUg==
 
 invariant@^2.2.4:
   version "2.2.4"
@@ -13298,6 +13452,11 @@ jose@^4.3.7:
   version "4.10.3"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/jose/-/jose-4.10.3.tgz#36ffeae395f14624a99961db6ada957476eccb19"
   integrity sha512-3S4wQnaoJKSAx9uHSoyf8B/lxjs1qCntHWL6wNFszJazo+FtWe+qD0zVfY0BlqJ5HHK4jcnM98k3BQzVLbzE4g==
+
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 js-string-escape@^1.0.1:
   version "1.0.1"
@@ -14813,6 +14972,20 @@ nan@^2.12.1:
   version "2.17.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/nan/-/nan-2.17.0.tgz#c0150a2368a182f033e9aa5195ec76ea41a199cb"
   integrity sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==
+
+nano-css@^5.3.1:
+  version "5.3.5"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/nano-css/-/nano-css-5.3.5.tgz#3075ea29ffdeb0c7cb6d25edb21d8f7fa8e8fe8e"
+  integrity sha512-vSB9X12bbNu4ALBu7nigJgRViZ6ja3OU7CeuiV1zMIbXOdmkLahgtPmh3GBOlDxbKY0CitqlPdOReGlBLSp+yg==
+  dependencies:
+    css-tree "^1.1.2"
+    csstype "^3.0.6"
+    fastest-stable-stringify "^2.0.2"
+    inline-style-prefixer "^6.0.0"
+    rtl-css-js "^1.14.0"
+    sourcemap-codec "^1.4.8"
+    stacktrace-js "^2.0.2"
+    stylis "^4.0.6"
 
 nanoid@^3.3.1, nanoid@^3.3.4:
   version "3.3.4"
@@ -17194,6 +17367,11 @@ react-inspector@^5.1.0:
     is-dom "^1.0.0"
     prop-types "^15.0.0"
 
+react-intersection-observer@^8.26.1:
+  version "8.34.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/react-intersection-observer/-/react-intersection-observer-8.34.0.tgz#6f6e67831c52e6233f6b6cc7eb55814820137c42"
+  integrity sha512-TYKh52Zc0Uptp5/b4N91XydfSGKubEhgZRtcg1rhTKABXijc4Sdr1uTp5lJ8TN27jwUsdXxjHXtHa0kPj704sw==
+
 react-is@17.0.2, react-is@^17.0.1, react-is@^17.0.2:
   version "17.0.2"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
@@ -17258,6 +17436,31 @@ react-sizeme@^3.0.1:
     invariant "^2.2.4"
     shallowequal "^1.1.0"
     throttle-debounce "^3.0.1"
+
+react-universal-interface@^0.6.2:
+  version "0.6.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/react-universal-interface/-/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"
+  integrity sha512-dg8yXdcQmvgR13RIlZbTRQOoUrDciFVoSBZILwjE2LFISxZZ8loVJKAkuzswl5js8BHda79bIb2b84ehU8IjXw==
+
+react-use@^17.2.4:
+  version "17.4.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/react-use/-/react-use-17.4.0.tgz#cefef258b0a6c534a5c8021c2528ac6e1a4cdc6d"
+  integrity sha512-TgbNTCA33Wl7xzIJegn1HndB4qTS9u03QUwyNycUnXaweZkE4Kq2SB+Yoxx8qbshkZGYBDvUXbXWRUmQDcZZ/Q==
+  dependencies:
+    "@types/js-cookie" "^2.2.6"
+    "@xobotyi/scrollbar-width" "^1.9.5"
+    copy-to-clipboard "^3.3.1"
+    fast-deep-equal "^3.1.3"
+    fast-shallow-equal "^1.0.0"
+    js-cookie "^2.2.1"
+    nano-css "^5.3.1"
+    react-universal-interface "^0.6.2"
+    resize-observer-polyfill "^1.5.1"
+    screenfull "^5.1.0"
+    set-harmonic-interval "^1.0.1"
+    throttle-debounce "^3.0.1"
+    ts-easing "^0.2.0"
+    tslib "^2.1.0"
 
 react@^16.14.0:
   version "16.14.0"
@@ -17546,7 +17749,7 @@ regenerate@^1.4.2:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
 
-regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
+regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
   version "0.13.10"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
   integrity sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==
@@ -17786,6 +17989,11 @@ requires-port@^1.0.0:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
+
 resolve-alpn@^1.2.0:
   version "1.2.1"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/resolve-alpn/-/resolve-alpn-1.2.1.tgz#b7adbdac3546aaaec20b45e7d8265927072726f9"
@@ -17940,6 +18148,13 @@ rsvp@^4.8.4:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
 
+rtl-css-js@^1.14.0:
+  version "1.16.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/rtl-css-js/-/rtl-css-js-1.16.0.tgz#e8d682982441aadb63cabcb2f7385f3fb78ff26e"
+  integrity sha512-Oc7PnzwIEU4M0K1J4h/7qUUaljXhQ0kCObRsZjxs2HjkpKsnoTMvSmvJ4sqgJZd0zBoEfAyTdnK/jMIYvrjySQ==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+
 run-async@^2.2.0, run-async@^2.4.0:
   version "2.4.1"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
@@ -18090,6 +18305,11 @@ schema-utils@^4.0.0:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.0.0"
 
+screenfull@^5.1.0:
+  version "5.2.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/screenfull/-/screenfull-5.2.0.tgz#6533d524d30621fc1283b9692146f3f13a93d1ba"
+  integrity sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==
+
 semver-diff@^3.1.1:
   version "3.1.1"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/semver-diff/-/semver-diff-3.1.1.tgz#05f77ce59f325e00e2706afd67bb506ddb1ca32b"
@@ -18198,6 +18418,11 @@ set-getter@^0.1.0:
   integrity sha512-9sVWOy+gthr+0G9DzqqLaYNA7+5OKkSmcqjL9cBpDEaZrr3ShQlyX2cZ/O/ozE41oxn/Tt0LGEM/w4Rub3A3gw==
   dependencies:
     to-object-path "^0.3.0"
+
+set-harmonic-interval@^1.0.1:
+  version "1.0.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/set-harmonic-interval/-/set-harmonic-interval-1.0.1.tgz#e1773705539cdfb80ce1c3d99e7f298bb3995249"
+  integrity sha512-AhICkFV84tBP1aWqPwLZqFvAwqEoVA9kxNMniGEUvzOlm4vLmOFLiTT3UZ6bziJTy4bOVpzWGTfSCbmaayGx8g==
 
 set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
@@ -18503,6 +18728,11 @@ source-map-url@^0.4.0:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/source-map-url/-/source-map-url-0.4.1.tgz#0af66605a745a5a2f91cf1bbf8a7afbc283dec56"
   integrity sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
 
+source-map@0.5.6:
+  version "0.5.6"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
+  integrity sha512-MjZkVp0NHr5+TPihLcadqnlVoGIoWo4IBHptutGh9wI3ttUYvCG26HkSuDi+K6lsZ25syXJXcctwgyVCt//xqA==
+
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
@@ -18517,6 +18747,11 @@ source-map@^0.7.3:
   version "0.7.4"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
+
+sourcemap-codec@^1.4.8:
+  version "1.4.8"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
+  integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
 
 space-separated-tokens@^1.0.0:
   version "1.1.5"
@@ -18654,6 +18889,13 @@ stable@^0.1.8:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
+stack-generator@^2.0.5:
+  version "2.0.10"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stack-generator/-/stack-generator-2.0.10.tgz#8ae171e985ed62287d4f1ed55a1633b3fb53bb4d"
+  integrity sha512-mwnua/hkqM6pF4k8SnmZ2zfETsRUpWXREfA/goT8SLCV4iOFa4bzOX2nDipWAZFPTjLvQB82f5yaodMVhK0yJQ==
+  dependencies:
+    stackframe "^1.3.4"
+
 stack-utils@^2.0.3:
   version "2.0.5"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stack-utils/-/stack-utils-2.0.5.tgz#d25265fca995154659dbbfba3b49254778d2fdd5"
@@ -18665,6 +18907,23 @@ stackframe@^1.3.4:
   version "1.3.4"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stackframe/-/stackframe-1.3.4.tgz#b881a004c8c149a5e8efef37d51b16e412943310"
   integrity sha512-oeVtt7eWQS+Na6F//S4kJ2K2VbRlS9D43mAlMyVpVWovy9o+jfgH8O9agzANzaiLjclA0oYzUXEM4PurhSUChw==
+
+stacktrace-gps@^3.0.4:
+  version "3.1.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stacktrace-gps/-/stacktrace-gps-3.1.2.tgz#0c40b24a9b119b20da4525c398795338966a2fb0"
+  integrity sha512-GcUgbO4Jsqqg6RxfyTHFiPxdPqF+3LFmQhm7MgCuYQOYuWyqxo5pwRPz5d/u6/WYJdEnWfK4r+jGbyD8TSggXQ==
+  dependencies:
+    source-map "0.5.6"
+    stackframe "^1.3.4"
+
+stacktrace-js@^2.0.2:
+  version "2.0.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stacktrace-js/-/stacktrace-js-2.0.2.tgz#4ca93ea9f494752d55709a081d400fdaebee897b"
+  integrity sha512-Je5vBeY4S1r/RnLydLl0TBTi3F2qdfWmYsGvtfZgEI+SCprPppaIhQf5nGcal4gI4cGpCV/duLcAzT1np6sQqg==
+  dependencies:
+    error-stack-parser "^2.0.6"
+    stack-generator "^2.0.5"
+    stacktrace-gps "^3.0.4"
 
 state-toggle@^1.0.0:
   version "1.0.3"
@@ -18994,6 +19253,11 @@ stylehacks@^5.1.0:
   dependencies:
     browserslist "^4.16.6"
     postcss-selector-parser "^6.0.4"
+
+stylis@^4.0.6:
+  version "4.1.3"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/stylis/-/stylis-4.1.3.tgz#fd2fbe79f5fed17c55269e16ed8da14c84d069f7"
+  integrity sha512-GP6WDNWf+o403jrEp9c5jibKavrtLW+/qYGhFxFrG8maXhwTBI7gLLhiBb0o7uFccWN+EOS9aMO6cGHWAO07OA==
 
 success-symbol@^0.1.0:
   version "0.1.0"
@@ -19411,6 +19675,11 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
+tiny-warning@^1.0.3:
+  version "1.0.3"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
+  integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
+
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -19486,6 +19755,11 @@ toggle-array@^1.0.1:
   integrity sha512-TZXgboKpD5Iu0Goi8hRXuJpE06Pbo+bies4I4jnTBhlRRgyen9c37nMylnquK/ZPKXXOeh1mJ14p9QdKp+9v7A==
   dependencies:
     isobject "^3.0.0"
+
+toggle-selection@^1.0.6:
+  version "1.0.6"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/toggle-selection/-/toggle-selection-1.0.6.tgz#6e45b1263f2017fa0acc7d89d78b15b8bf77da32"
+  integrity sha512-BiZS+C1OS8g/q2RRbJmy59xpyghNBqrr6k5L/uKBGRsTfxmu3ffiRnd8mlGPUVayg8pvfi5urfnu8TU7DVOkLQ==
 
 toidentifier@1.0.1:
   version "1.0.1"
@@ -19573,6 +19847,11 @@ ts-dedent@^2.0.0:
   version "2.2.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/ts-dedent/-/ts-dedent-2.2.0.tgz#39e4bd297cd036292ae2394eb3412be63f563bb5"
   integrity sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==
+
+ts-easing@^0.2.0:
+  version "0.2.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/ts-easing/-/ts-easing-0.2.0.tgz#c8a8a35025105566588d87dbda05dd7fbfa5a4ec"
+  integrity sha512-Z86EW+fFFh/IFB1fqQ3/+7Zpf9t2ebOAxNI/V6Wo7r5gqiqtxmgTlQ1qbqQcjLKYeSHPTsEmvlJUDg/EuL0uHQ==
 
 ts-invariant@^0.10.3:
   version "0.10.3"

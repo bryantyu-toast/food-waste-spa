@@ -42,6 +42,7 @@
     "@toasttab/banquet-single-spa-css": "^0.1.0",
     "@toasttab/buffet-pui-buttons": "^2.2.7",
     "@toasttab/buffet-pui-card": "^1.4.13",
+    "@toasttab/buffet-pui-config-templates": "^3.1.14",
     "@toasttab/buffet-pui-dropdowns": "^5.3.9",
     "@toasttab/buffet-pui-icons": "^5.0.0",
     "@toasttab/buffet-pui-styles": "^2.5.2",
