@@ -3,18 +3,37 @@ import { useNavigate } from 'react-router-dom'
 
 import { BaseCard } from '@toasttab/buffet-pui-card'
 import { ArrowForwardIcon } from '@toasttab/buffet-pui-icons'
+import {
+  SecondaryNav,
+  SecondaryNavSection,
+  SecondaryNavItem
+} from '@toasttab/buffet-pui-navigation'
+
+import {
+  Page,
+  PageHeader,
+  PageArea,
+  HeadingGroup,
+  Title,
+  LayoutProvider,
+  PageTargetNavLayout
+} from '@toasttab/buffet-pui-config-templates'
 
 export const BASE_URL = '/restaurants/admin/food-waste'
 
 const FOOD_WASTE_DATA = [
   {
-    title: 'Information',
+    title: 'Tools',
     links: [
       {
-        title: 'How to track food waste',
-        description: 'How to Track and Reduce Food Waste in Your Restaurant',
-        link: 'https://pos.toasttab.com/blog/on-the-line/reduce-food-waste',
-        isExternal: true
+        title: 'Food waste calculator',
+        link: '/calculator',
+        description: 'Tool to calculate food waste'
+      },
+      {
+        title: 'Track waste',
+        link: '/track-waste',
+        description: 'Track your restaurants waste'
       },
       {
         title: 'Donation resources',
@@ -24,12 +43,13 @@ const FOOD_WASTE_DATA = [
     ]
   },
   {
-    title: 'Tools',
+    title: 'Articles',
     links: [
       {
-        title: 'Food waste calculator',
-        link: '/calculator',
-        description: 'Tool to calculate food waste'
+        title: 'How to track food waste',
+        description: 'How to Track and Reduce Food Waste in Your Restaurant',
+        link: 'https://pos.toasttab.com/blog/on-the-line/reduce-food-waste',
+        isExternal: true
       }
     ]
   }
@@ -37,7 +57,7 @@ const FOOD_WASTE_DATA = [
 
 const Section = ({ title, children }: any) => {
   return (
-    <section className='border-t py-8'>
+    <section className='py-8'>
       <p className='text-heading-3 mb-8'>{title}</p>
       {children}
     </section>
@@ -72,31 +92,30 @@ const LinkItem = ({ title, description, link, isExternal }: any) => {
 
 export const Home = () => {
   return (
-    <div className='max-w-5xl m-auto pt-16'>
-      <div className='mb-16'>
-        <h1 className='text-heading-2'>Food waste</h1>
+    <div className='flex items-start'>
+      <div className='flex-1 px-8'>
+        {FOOD_WASTE_DATA.map((data) => {
+          return (
+            <Section title={data.title}>
+              <div className='grid grid-cols-3 gap-2'>
+                {data.links.map(
+                  ({ title, description, link, isExternal }: any) => {
+                    return (
+                      <LinkItem
+                        key={title}
+                        title={title}
+                        description={description}
+                        link={link}
+                        isExternal={isExternal}
+                      />
+                    )
+                  }
+                )}
+              </div>
+            </Section>
+          )
+        })}
       </div>
-
-      {FOOD_WASTE_DATA.map((data) => {
-        return (
-          <Section title={data.title}>
-            <div className='grid grid-cols-3 gap-2'>
-              {data.links.map(
-                ({ title, description, link, isExternal }: any) => {
-                  return (
-                    <LinkItem
-                      title={title}
-                      description={description}
-                      link={link}
-                      isExternal={isExternal}
-                    />
-                  )
-                }
-              )}
-            </div>
-          </Section>
-        )
-      })}
     </div>
   )
 }

@@ -45,12 +45,16 @@
     "@toasttab/buffet-pui-config-templates": "^3.1.14",
     "@toasttab/buffet-pui-dropdowns": "^5.3.9",
     "@toasttab/buffet-pui-icons": "^5.0.0",
+    "@toasttab/buffet-pui-navigation": "^3.0.19",
     "@toasttab/buffet-pui-styles": "^2.5.2",
+    "@toasttab/buffet-pui-table": "^5.2.1",
     "@toasttab/buffet-pui-text-input": "^3.2.2",
+    "axios": "^1.1.3",
     "classnames": "^2.3.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-router-dom": "^6.4.2"
+    "react-router-dom": "^6.4.2",
+    "react-table": "^7.8.0"
   },
   "volta": {
     "node": "16.14.0",
