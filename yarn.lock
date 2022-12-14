@@ -15,6 +15,24 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@apollo/client@3.6.9":
+  version "3.6.9"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@apollo/client/-/client-3.6.9.tgz#ad0ee2e3a3c92dbed4acd6917b6158a492739d94"
+  integrity sha512-Y1yu8qa2YeaCUBVuw08x8NHenFi0sw2I3KCu7Kw9mDSu86HmmtHJkCAifKVrN2iPgDTW/BbP3EpSV8/EQCcxZA==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.1.1"
+    "@wry/context" "^0.6.0"
+    "@wry/equality" "^0.5.0"
+    "@wry/trie" "^0.3.0"
+    graphql-tag "^2.12.6"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.16.1"
+    prop-types "^15.7.2"
+    symbol-observable "^4.0.0"
+    ts-invariant "^0.10.3"
+    tslib "^2.3.0"
+    zen-observable-ts "^1.2.5"
+
 "@apollo/client@^3.6.4":
   version "3.7.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@apollo/client/-/client-3.7.0.tgz#1c26a04488f45b3a4779fa2562e4b706402cb876"
@@ -33,6 +51,32 @@
     ts-invariant "^0.10.3"
     tslib "^2.3.0"
     zen-observable-ts "^1.2.5"
+
+"@apollo/client@latest":
+  version "3.7.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@apollo/client/-/client-3.7.2.tgz#71b6846c1d99b81d041a1134f5679e30ec0363a0"
+  integrity sha512-ohAIpXl3mTa1Fd3GT/K37VwQJfTIuuJRp4aOlJ4q/hlx0Wxh+RqDrbn0awtVCOdhGDQN+CQQmVzIqFKn6GziXQ==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.1.1"
+    "@wry/context" "^0.7.0"
+    "@wry/equality" "^0.5.0"
+    "@wry/trie" "^0.3.0"
+    graphql-tag "^2.12.6"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.16.1"
+    prop-types "^15.7.2"
+    response-iterator "^0.2.6"
+    symbol-observable "^4.0.0"
+    ts-invariant "^0.10.3"
+    tslib "^2.3.0"
+    zen-observable-ts "^1.2.5"
+
+"@apollo/react-hooks@^4.0.0":
+  version "4.0.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@apollo/react-hooks/-/react-hooks-4.0.0.tgz#7bf7b320c90d276f637d9a84b503e17b840dd4e6"
+  integrity sha512-fCu0cbne3gbUl0QbA8X4L33iuuFVQbC5Jo2MIKRK8CyawR6PoxDpFdFA1kc6033ODZuZZ9Eo4RdeJFlFIIYcLA==
+  dependencies:
+    "@apollo/client" latest
 
 "@auth0/auth0-spa-js@^1.19.3":
   version "1.22.5"
@@ -3526,6 +3570,22 @@
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
+"@reach/auto-id@0.11.2":
+  version "0.11.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/auto-id/-/auto-id-0.11.2.tgz#c66a905c5401d1ac3da8d26165b8d27d6e778fa6"
+  integrity sha512-YZ21b0Kb88wJ0t7QjSznWOYskARQMnmXY9Y2XZ5RyYcZ2krT4s3+ghghpfaPs6BKcrZDonZCrU65OFDJPa1jAw==
+  dependencies:
+    "@reach/utils" "0.11.2"
+    tslib "^2.0.0"
+
+"@reach/descendants@0.11.2":
+  version "0.11.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/descendants/-/descendants-0.11.2.tgz#49ea1b5eb91aba8ae6dce57f6575c38aff1f9756"
+  integrity sha512-63Wdx32/RyjGRJc4UZKK7F1sIrb6jeGkDwvQH0hv0lRAhEjsiSQ1t2JTYDml3testFP48J0B2xS7JzNeY0zoQw==
+  dependencies:
+    "@reach/utils" "0.11.2"
+    tslib "^2.0.0"
+
 "@reach/observe-rect@1.2.0":
   version "1.2.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/observe-rect/-/observe-rect-1.2.0.tgz#d7a6013b8aafcc64c778a0ccb83355a11204d3b2"
@@ -3541,6 +3601,26 @@
     prop-types "^15.7.2"
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
+
+"@reach/tabs@^0.11.2":
+  version "0.11.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/tabs/-/tabs-0.11.2.tgz#75a73d069ff4832259a191e7e321818c9d09a2c8"
+  integrity sha512-iVDXfmdpJmBavyyiJbm9sUddlelra+x5MaF5Y4QwV7Q+w3t9RLqTePQAOX+2MX0BJgvasX/YItMBO2JumWxGPQ==
+  dependencies:
+    "@reach/auto-id" "0.11.2"
+    "@reach/descendants" "0.11.2"
+    "@reach/utils" "0.11.2"
+    prop-types "^15.7.2"
+    tslib "^2.0.0"
+
+"@reach/utils@0.11.2":
+  version "0.11.2"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@reach/utils/-/utils-0.11.2.tgz#be1f03650db56fd67a16d3fc70e5262cdb139cec"
+  integrity sha512-fBTolYj+rKTROXmf0zHO0rCWSvw7J0ALmYj5QxW4DmITMOH5uyRuWDWOfqohIGFbOtF/sum50WTB3tvx76d+Aw==
+  dependencies:
+    "@types/warning" "^3.0.0"
+    tslib "^2.0.0"
+    warning "^4.0.3"
 
 "@reach/utils@0.16.0":
   version "0.16.0"
@@ -5128,6 +5208,17 @@
     "@toasttab/buffet-pui-buttons" "^2.3.0-alpha.0"
     "@toasttab/buffet-pui-icons" "^5.0.0"
 
+"@toasttab/buffet-pui-tabs@^3.4.0":
+  version "3.4.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-tabs/-/buffet-pui-tabs-3.4.0.tgz#9d2f69a6f00d1e549fc82efa95be5c33baa615aa"
+  integrity sha512-qKX6/UeIx8iSbMcbMpeSXP4VA6BZMwJPA4qdzMLs5YfB/V83uqCpwSzaAM2OCgLtREFxfDiGyG/247eu78KjlQ==
+  dependencies:
+    "@reach/tabs" "^0.11.2"
+    "@toasttab/buffet-pui-icons" "^5.0.0"
+    "@toasttab/use-screen-size" "^2.1.0"
+    react-use "^17.4.0"
+    tslib "^2.3.1"
+
 "@toasttab/buffet-pui-text-base@^1.9.3":
   version "1.9.3"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/buffet-pui-text-base/-/buffet-pui-text-base-1.9.3.tgz#e52fbe0133bb4c684c2b3e6bcf08c82db520b5fc"
@@ -5257,6 +5348,11 @@
   integrity sha512-66TBQj0zH8RXTTu2c2yPvuhp4emtikc1EpBXgIPpwBeCOtFb5JodeKcQOTPWl7NP4eRCuFJjvSX53OFHZeTx6w==
   dependencies:
     tslib "^2.3.1"
+
+"@toasttab/env-from-hostname@^1.0.1":
+  version "1.0.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@toasttab/env-from-hostname/-/env-from-hostname-1.0.1.tgz#e3e8ba539b8461c663615c93833ad9fd94be0cca"
+  integrity sha512-qHX/DiF95gAoH2PF/hmg9iDZa+yN6Xa8L0neBbfItAnaYBG/eeVWASYRawRHPSAjTodrewNnf9kGV6DMB74Etg==
 
 "@toasttab/eslint-plugin-toast@^2.1.0":
   version "2.2.0"
@@ -5841,6 +5937,11 @@
   dependencies:
     "@types/configstore" "*"
     boxen "^4.2.0"
+
+"@types/warning@^3.0.0":
+  version "3.0.0"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/@types/warning/-/warning-3.0.0.tgz#0d2501268ad8f9962b740d387c4654f5f8e23e52"
+  integrity sha512-t/Tvs5qR47OLOr+4E9ckN8AmP2Tf16gWq+/qA4iUGS/OOyHVO8wv2vjJuX8SNOUTJyWb+2t7wJm6cXILFnOROA==
 
 "@types/webpack-bundle-analyzer@^4.4.0":
   version "4.6.0"
@@ -9088,6 +9189,11 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
+
+crypto-hash@^2.0.1:
+  version "2.0.1"
+  resolved "https://nexus.eng.toasttab.com/repository/toast_npm/crypto-hash/-/crypto-hash-2.0.1.tgz#46c3732e65a078ea06b8b4ae686db41216f81213"
+  integrity sha512-t4mkp7Vh6MuCZRBf0XLzBOfhkH3nW6YEAotMDSjshVQ1GffCMGdPLSr7pKH0rdXY02jTjAZ7QW2apD0buaZXcQ==
 
 crypto-random-string@^4.0.0:
   version "4.0.0"
@@ -17560,7 +17666,7 @@ react-universal-interface@^0.6.2:
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/react-universal-interface/-/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"
   integrity sha512-dg8yXdcQmvgR13RIlZbTRQOoUrDciFVoSBZILwjE2LFISxZZ8loVJKAkuzswl5js8BHda79bIb2b84ehU8IjXw==
 
-react-use@^17.2.4:
+react-use@^17.2.4, react-use@^17.4.0:
   version "17.4.0"
   resolved "https://nexus.eng.toasttab.com/repository/toast_npm/react-use/-/react-use-17.4.0.tgz#cefef258b0a6c534a5c8021c2528ac6e1a4cdc6d"
   integrity sha512-TgbNTCA33Wl7xzIJegn1HndB4qTS9u03QUwyNycUnXaweZkE4Kq2SB+Yoxx8qbshkZGYBDvUXbXWRUmQDcZZ/Q==

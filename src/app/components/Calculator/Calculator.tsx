@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 import { Select } from '@toasttab/buffet-pui-dropdowns'
 import { NumberInput } from '@toasttab/buffet-pui-text-input'
-import { getCategories, getIngredients, getYield } from '../../data/DATA'
+import { getCategories, getIngredients, getYield } from '../../../data/DATA'
 import { BaseCard } from '@toasttab/buffet-pui-card'
 import { Size } from '@toasttab/buffet-pui-text-base'
 

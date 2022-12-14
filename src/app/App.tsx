@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useBanquetProps, BanquetProps } from 'banquet-runtime-modules'
+import { ApolloProvider, useQuery } from '@apollo/client'
 import axios from 'axios'
-import { Home } from './Home/Home'
-import { Calculator } from './Calculator/Calculator'
-import { FoodDonation } from './FoodDonation/FoodDonation'
-import { TrackWaste } from './TrackWaste/TrackWaste'
+import { Home } from './components/Home/Home'
+import { Calculator } from './components/Calculator/Calculator'
+import { FoodDonation } from './components/FoodDonation/FoodDonation'
+import { TrackWaste } from './components/TrackWaste/TrackWaste'
 import {
   HeadingGroup,
   LayoutProvider,
@@ -15,9 +16,12 @@ import {
   PageHeader,
   Title
 } from '@toasttab/buffet-pui-config-templates'
-import { ProductionSheet } from './ProductionSheet/ProductionSheet'
+import { ProductionSheet } from './components/ProductionSheet/ProductionSheet'
 import { Button } from '@toasttab/buffet-pui-buttons'
-import { WasteReport } from './WasteReport/WasteReport'
+import { WasteReport } from './components/WasteReport/WasteReport'
+import { WasteScore } from './components/WasteScore/WasteScore'
+import { useClient } from './apollo/apollo-client'
+import { GET_NET_SALES_GUEST_COUNT } from './graphql/graphql'
 
 const PageLayout = ({ children, header }: any) => {
   return (
@@ -37,8 +41,11 @@ const PageLayout = ({ children, header }: any) => {
 }
 
 export function App(props: BanquetProps) {
+  const { client } = useClient()
   const { restaurantInfo } = props
+  console.log({ props })
   const [items, setItems] = React.useState([])
+  const [guestCount, setGuestCount] = React.useState(0)
   const token = document.getElementById('authenticity-token') || null
 
   axios.create({
@@ -58,39 +65,58 @@ export function App(props: BanquetProps) {
       )
       .then((res) => {
         const { data } = JSON.parse(res.data.slice(1))
-        console.log({ res: JSON.parse(res.data.slice(1)) })
+        // console.log({ res: JSON.parse(res.data.slice(1)) })
         setItems(data)
       })
   }, [])
 
-  return (
-    <BrowserRouter basename='/restaurants/admin/food-waste'>
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <PageLayout header='Food-waste'>
-              <Home />
-            </PageLayout>
-          }
-        />
+  // const { data } = useQuery(GET_NET_SALES_GUEST_COUNT, {
+  //   variables: {
+  //     restaurantGuid: restaurantInfo?.restaurantGuid,
+  //     currentDate: 'LAST_WEEK',
+  //     comparisonDate: null,
+  //     restaurantId: restaurantInfo?.restaurant?.id
+  //   }
+  // })
 
-        <Route path='/calculator' element={<Calculator />} />
-        <Route path='/food-donation' element={<FoodDonation />} />
-        <Route
-          path='/track-waste'
-          element={
-            <PageLayout header='Tracker'>
-              <TrackWaste />
-            </PageLayout>
-          }
-        />
-        <Route
-          path='/production-sheet'
-          element={<ProductionSheet items={items} />}
-        />
-        <Route path='/waste-report' element={<WasteReport items={items} />} />
-      </Routes>
-    </BrowserRouter>
+  // $restaurantGuid: ID!
+  //   $currentDate: CurrentDate!
+  //   $comparisonDate: ComparisonDate!
+  //   $restaurantId: ID!
+
+  // console.log({ data })
+
+  return (
+    <ApolloProvider client={client}>
+      <BrowserRouter basename='/restaurants/admin/food-waste'>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <PageLayout header='Food-waste'>
+                <Home />
+              </PageLayout>
+            }
+          />
+
+          <Route path='/calculator' element={<Calculator />} />
+          <Route path='/food-donation' element={<FoodDonation />} />
+          <Route
+            path='/track-waste'
+            element={
+              <PageLayout header='Tracker'>
+                <TrackWaste />
+              </PageLayout>
+            }
+          />
+          <Route
+            path='/production-sheet'
+            element={<ProductionSheet items={items} />}
+          />
+          <Route path='/waste-report' element={<WasteReport items={items} />} />
+          <Route path='/waste-score' element={<WasteScore />} />
+        </Routes>
+      </BrowserRouter>
+    </ApolloProvider>
   )
 }
